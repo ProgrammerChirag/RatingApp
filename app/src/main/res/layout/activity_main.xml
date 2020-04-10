@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingLeft="25dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_data"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="minimum rating is one select maximum rating"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="center"
+        />
+    <RelativeLayout
+        app:layout_constraintTop_toBottomOf="@+id/text_data"
+        android:id="@+id/relate1"
+        android:orientation="horizontal"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:background="@drawable/spinnerbg"
+        android:layout_marginTop="20dp"
+        >
+        <Spinner
+            android:id="@+id/planets_spinner"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:dropDownWidth="100dp"
+            android:popupElevation="10dp"
+            android:foregroundTint="@android:color/black"
+            android:spinnerMode="dropdown"
+            android:popupBackground="@drawable/spinnerbg"
+            android:outlineSpotShadowColor="@android:color/white"
+            android:outlineAmbientShadowColor="@android:color/white"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:clickable="false"
+        android:id="@+id/Applybtn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Apply"
+        android:textAllCaps="false"
+        android:background="@drawable/spinner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <Button
+        android:id="@+id/historybtn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="history"
+        android:background="@drawable/spinner"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Applybtn"
+        android:layout_marginTop="20dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
